@@ -2,7 +2,7 @@ const jsonServer = require('json-server');
 const server = jsonServer.create();
 const cors = require('cors');  // Corrected the typo here
 const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults({ static: false });
+const middlewares = jsonServer.defaults({ static: 'public' });
 const port = process.env.PORT || 8080;
 
 // Use CORS middleware to allow cross-origin requests
